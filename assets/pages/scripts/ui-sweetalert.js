@@ -20,6 +20,7 @@ var SweetAlert = function () {
         		var sa_popupMessageCancel = $(this).data('popup-message-cancel');
         		var sa_confirmButtonClass = $(this).data('confirm-button-class');
         		var sa_cancelButtonClass = $(this).data('cancel-button-class');
+				var sa_id = $(this).data('id');
         	
         		$(this).click(function(){
         			//console.log(sa_btnClass);
@@ -39,7 +40,8 @@ var SweetAlert = function () {
 					},
 					function(isConfirm){
 				        if (isConfirm){
-				        	swal(sa_popupTitleSuccess, sa_popupMessageSuccess, "success");
+							alert('succes:' + sa_id);
+				        	// swal(sa_popupTitleSuccess, sa_popupMessageSuccess, "success");
 				        } else {
 							swal(sa_popupTitleCancel, sa_popupMessageCancel, "error");
 				        }
